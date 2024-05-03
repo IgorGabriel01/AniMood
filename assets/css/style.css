@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #fff;
+    --second-color: #0B0B0B;
+    --third-color: #f2f2f2;
+    --fourth-color: #131313;
+}
+
+body {
+    height: 100vh;
+    width: 90vw;
+    margin: 0 auto;
+    background-color: var(--first-color);
+    color: var(--second-color);
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-header {
+    width: 25px;
+    height: 25px;
+}
+
+.div-header-options {
+    margin-top: 25px;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    transition: 0.5s;
+}
+
+header img {
+    width: 240px;
+    height: 45px;
+    align-self: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main p {
+    text-align: center;
+    font-size: 25px;
+    width: 780px;
+}
+
+#principal-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+main section img {
+    width: 200px;
+    height: 190px;
+}
+
+#principal-section-questions {
+    display: flex;
+    flex-direction: column;
+    flex: 0.8;
+}
+
+#salutation-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--third-color);
+    border: var(--second-color) 1px solid;
+    border-radius: 10px;
+    font-size: 28px;
+    height: 100px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.div-answers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+.answers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--third-color);
+    border: var(--second-color) 1px solid;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    flex: 1;
+    transition: 0.5s;
+    min-width: 130px;
+}
+
+/*Estilos de Hover*/
+
+.answers:hover, .div-header-options:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+/*Dark theme*/
+
+.answers-questions-black {
+    color: var(--third-color) !important;
+    border: 1px solid var(--third-color) !important;
+    background-color: var(--fourth-color) !important;
+    transition: 0.5s !important;
+}
