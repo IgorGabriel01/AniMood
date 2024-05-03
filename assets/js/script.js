@@ -1,27 +1,42 @@
 const getAnswwers = document.getElementsByClassName('answers');
+const getMain = document.querySelector('main');
 
 for (const i of getAnswwers) {
     i.addEventListener('click', (e)=>{
-        const contentAnswers = i.textContent;
+        let contentAnswers;
+
+        switch(i) {
+            case 'Feliz':
+                contentAnswers = 'happy';
+            break;
+                
+            case 'Triste':
+                contentAnswers = 'happy';
+            break;
+                
+            case 'Apaixonado':
+                contentAnswers = 'hapy';
+            break;
+                
+            case 'Nervoso':
+                contentAnswers = 'hapy';
+            break;
+
+            default:
+                break;
+        }   
 
         async function requestWaifu() {
 
             try{
         
-                const response = await fetch(`https://waifu.it/api/v4/${contentAnswers}`, {
-                    headers: {
-                        'Authorization': 'MTIxNDI0OTc0ODAxNDQzMjI5Nw--.MTcxNDUwOTI5OQ--.a3c82fbc8d7'
-                    }
-                });
+                const response = await fetch(`https://api.otakugifs.xyz/gif?reaction=${contentAnswers}`);
         
-                if(response.status >= 400 &&  response.status <= 500){
-                    
-                }
-
                 const responseJson = await response.json();
-        
-                document.body.innerHTML = `<img width="50%" height="50%" src="${responseJson.url}"></img>`;
-        
+
+                console.log(responseJson);
+
+                
             } catch(error){
         
                 console.log(error);
@@ -30,8 +45,7 @@ for (const i of getAnswwers) {
             
         }
         requestWaifu();
-    });
-}
-
+    })
+};
 
 

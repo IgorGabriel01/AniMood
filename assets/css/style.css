@@ -16,6 +16,10 @@
 body {
     height: 100vh;
     width: 90vw;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 3.5rem;
     margin: 0 auto;
     background-color: var(--first-color);
     color: var(--second-color);
@@ -24,20 +28,20 @@ body {
 
 header {
     width: 100%;
-    height: 180px;
+    height: 20rem;
     display: flex;
     justify-content: space-between;
 }
 
 .icons-header {
-    width: 25px;
-    height: 25px;
+    width: 2rem;
+    height: 2rem;
 }
 
 .div-header-options {
-    margin-top: 25px;
-    gap: 10px;
-    font-size: 14px;
+    margin-top: 2rem;
+    gap: 0.625rem;
+    font-size: 0.875rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -45,10 +49,11 @@ header {
     transition: 0.5s;
 }
 
-header img {
-    width: 240px;
-    height: 45px;
+header > img {
+    width: 25rem;
+    height: 5rem;
     align-self: center;
+    transition: 0.5s;
 }
 
 main {
@@ -59,9 +64,9 @@ main {
 }
 
 main p {
+    font-size: 2.3vw;
     text-align: center;
-    font-size: 25px;
-    width: 780px;
+    width: 80%;
 }
 
 #principal-section {
@@ -69,12 +74,13 @@ main p {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
 
 main section img {
-    width: 200px;
-    height: 190px;
+    width: 20rem;
+    height: 20rem;
+    transition: 0.3s;
 }
 
 #principal-section-questions {
@@ -90,19 +96,19 @@ main section img {
     text-align: center;
     background-color: var(--third-color);
     border: var(--second-color) 1px solid;
-    border-radius: 10px;
-    font-size: 28px;
-    height: 100px;
+    border-radius: 0.625rem;
+    font-size: 1.75rem;
+    height: 6.25rem;
     font-weight: 500;
     transition: 0.5s;
 }
 
 .div-answers {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.75rem;
+    margin-top: 1.875rem;
 }
 
 .answers {
@@ -111,13 +117,13 @@ main section img {
     justify-content: center;
     background-color: var(--third-color);
     border: var(--second-color) 1px solid;
-    border-radius: 10px;
-    height: 50px;
-    font-size: 18px;
+    border-radius: 0.625rem;
+    height: 3.125rem;
+    font-size: 1.125rem;
     font-weight: 500;
     flex: 1;
     transition: 0.5s;
-    min-width: 130px;
+    min-width: 8.125rem;
 }
 
 /*Estilos de Hover*/
@@ -135,4 +141,48 @@ main section img {
     border: 1px solid var(--third-color) !important;
     background-color: var(--fourth-color) !important;
     transition: 0.5s !important;
+}
+
+/*Responsividade / Media Queries*/
+
+@media screen and (max-width: 1050px) {
+    header > img {
+        width: 20rem;
+        height: 4rem;
+        align-self: center;
+    }
+    main p {
+        font-size: 3vw;
+        text-align: center;
+        width: 90%;
+    }
+    #principal-section {
+        margin-top: 8rem;
+    }
+    main section img {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    main p {
+        font-size: 3.5vw;
+        text-align: center;
+        width: 90%;
+    }
+    #principal-section {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+    main section img {
+        margin-bottom: 4rem;
+        width: 15rem;
+        height: 15rem;
+        transition: 0.3s;
+    }
+    #salutation-div {
+        padding: 1rem;
+    }
 }
