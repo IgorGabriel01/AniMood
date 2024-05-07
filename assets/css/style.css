@@ -126,7 +126,7 @@ main section img {
     min-width: 8.125rem;
 }
 
-/*Estilos de Hover*/
+/*Estilos de Hover - Home*/
 
 .answers:hover, .div-header-options:hover {
     cursor: pointer;
@@ -143,7 +143,7 @@ main section img {
     transition: 0.5s !important;
 }
 
-/*Responsividade / Media Queries*/
+/*Responsividade / Media Queries - Home*/
 
 @media screen and (max-width: 1050px) {
     header > img {
