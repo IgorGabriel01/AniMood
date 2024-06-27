@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #fff;
+    --second-color: #0B0B0B;
+    --third-color: #f2f2f2;
+    --fourth-color: #131313;
+}
+
+body {
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: var(--first-color);
+    color: var(--second-color);
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-header {
+    width: 2rem;
+    height: 2rem;
+}
+
+.div-header-options {
+    margin-top: 2rem;
+    gap: 0.625rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    transition: 0.5s;
+}
+
+header a, header a img {
+    width: 15rem;
+    align-self: center;
+    transition: 0.5s;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main p {
+    font-size: 2.3vw;
+    text-align: center;
+    width: 80%;
+}
+
+#principal-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3.125rem;
+}
+
+main section img {
+    width: 14rem;
+    height: 13rem;
+    transition: 0.3s;
+}
+
+#principal-section-questions {
+    display: flex;
+    flex-direction: column;
+    flex: 0.8;
+}
+
+#salutation-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--third-color);
+    border: var(--second-color) 1px solid;
+    border-radius: 0.625rem;
+    font-size: 1.75rem;
+    height: 6.25rem;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.div-answers {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.75rem;
+    margin-top: 1.875rem;
+}
+
+.answers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--third-color);
+    border: var(--second-color) 1px solid;
+    border-radius: 0.625rem;
+    height: 3.125rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    flex: 1;
+    transition: 0.5s;
+    min-width: 8.125rem;
+}
+
+/*Estilos de Hover - Home*/
+
+.answers:hover, .div-header-options:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+/*Dark theme*/
+
+.answers-questions-black {
+    color: var(--third-color) !important;
+    border: 1px solid var(--third-color) !important;
+    background-color: var(--fourth-color) !important;
+    transition: 0.5s !important;
+}
+
+/* Estilos - Mostrar Gif*/
+#show-gif {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+#show-gif > img {
+    width: 14rem;
+    height: 13rem;
+    margin-top: 2rem;
+}
+
+#show-gif > div div{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--third-color);
+    border: var(--second-color) 1px solid;
+    border-radius: 0.625rem;
+    height: 3.125rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    flex: 1;
+    transition: 0.5s;
+}
+
+#show-gif > div div:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+/* Estilos - Body Error*/
+
+#error-body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#error-body > h1 {
+    font-size: 4rem;
+    background: linear-gradient(45deg, #659ACE, #F89BCA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 15rem;
+}
+
+#error-body > p {
+    font-size: 1.5rem;
+}
+
+#error-body > img{
+    width: 12rem;
+    align-self: flex-end;
+}
+
+/* Estilos - Meus Gifs*/
+
+#my-gifs-section {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#my-gifs-section > img {
+    width: 14rem;
+    margin-top: 2rem;
+}
+
+#div-d-my-gifs {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    gap: 1rem;
+}
+
+#div-d-my-gifs > div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#div-d-my-gifs > div img{
+    width: 95%;
+    margin-bottom: 1rem;
+}
+
+#div-gif-vazio {
+    width: 100%;
+}
+
+
+/* Responsividade / Media Queries - Principal */
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: 25%;
+    }
+
+    main > p {
+        font-size: 1.5rem;
+    }
+
+    #principal-section {
+        margin-top: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #principal-section > img {
+        width: 9rem;
+        height: 8rem;
+    }
+
+    #principal-section-questions {
+        width: 90%;
+    }
+
+    #salutation-div {
+        font-size: 1.5rem;
+        height: 5rem;
+    }
+
+    .div-answers {
+        margin-top: 1rem;
+    }
+
+    .answers {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    header {
+        height: 20%;
+    }
+
+    header > img {
+        width: 12rem;
+    }
+    
+    .icons-header {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .div-header-options {
+        font-size: 0.8rem;
+    }
+
+    main > p {
+        font-size: 1.2rem;
+    }
+
+    #salutation-div {
+        font-size: 1.2rem;
+        height: 4rem;
+    }
+
+    #div-p-answers {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .div-answers {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .answers {
+        font-size: 0.9rem;
+        height: 3rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .div-header-options > p{
+        display: none;
+    }
+}
+
+/* Responsividade / Media Queries - Página de erro */
+
+@media screen and (max-width: 680px) {
+    #error-body > h1 {
+        font-size: 8vw;
+        margin-top: 15rem;
+    }
+
+    #error-body > img{
+        width: 8rem;
+        align-self: flex-end;
+    }
+}
