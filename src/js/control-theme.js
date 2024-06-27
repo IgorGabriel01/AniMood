@@ -41,6 +41,10 @@ function toPlaceThemeDark(){
             document.getElementById('in-system-show-gifs').classList.toggle('answers-questions-black');
         }
 
+        if( document.querySelector('section div h2')){
+            document.querySelector('section div h2').style.color = '#F2F2F2';
+        }
+
         controlsDarkTheme = true;
 
         localStorage.setItem('themeDark', true);
@@ -78,6 +82,11 @@ function toPlaceThemeDark(){
             document.getElementById('in-system-show-gifs').classList.toggle('answers-questions-black');
         }
       
+        if( document.querySelector('section div h2')){
+            document.querySelector('section div h2').style.color = '#0B0B0B';
+        }
+        
+
         controlsDarkTheme = false;
 
         localStorage.setItem('themeDark', false);

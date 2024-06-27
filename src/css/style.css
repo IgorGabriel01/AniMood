@@ -154,6 +154,14 @@ main section img {
     margin-top: 2rem;
 }
 
+#gif {
+    width: 100%;
+}
+
+#show-gif > div {
+    flex-grow: 0.3;
+}
+
 #show-gif > div div{
     margin-top: 1rem;
     display: flex;
@@ -233,6 +241,10 @@ main section img {
 #div-d-my-gifs > div img{
     width: 95%;
     margin-bottom: 1rem;
+}
+
+#div-gifs {
+    overflow: auto;
 }
 
 #div-gif-vazio {

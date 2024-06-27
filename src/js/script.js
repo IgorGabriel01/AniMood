@@ -11,6 +11,38 @@ if (storedGifs) {
     myLinkGifs = storedGifs;
 }
 
+function showMyGifs() {
+    document.title = 'Meus Gifs'
+
+    getMain.innerHTML = `
+            <section id="my-gifs-section">
+                <img src="./assets/img/miku/miku-person-4.png">
+                <div id="div-d-my-gifs">
+                    <h2>Meus Gifs</h2>
+                    <div id="div-gifs"></div>
+                </div>
+            </section>
+            `;
+
+            console.log();
+
+            if (document.getElementById('dark-theme').textContent.trim() == 'Light Mode') {
+                document.querySelector('section div h2').style.color = '#f2f2f2'; 
+            }
+
+            const divPai = document.getElementById('div-gifs');
+
+            if (myLinkGifs.length) {
+                for (const gifObj of myLinkGifs) {
+                    const gif = document.createElement('img');
+                    gif.setAttribute('src', gifObj.url);
+                    divPai.appendChild(gif);
+                }
+            } else {
+                divPai.innerHTML = `<p id="div-gif-vazio">Não há gifs armazenados.</p>`;
+            }
+}
+
 for (const i of getAnswers) {
     i.addEventListener('click', async () => {
         let contentAnswers;
@@ -39,8 +71,6 @@ for (const i of getAnswers) {
                 break;
         }
 
-        if (!contentAnswers) return;
-
         try {
             const response = await fetch(`https://api.otakugifs.xyz/gif?reaction=${contentAnswers}`);
             const responseJson = await response.json();
@@ -48,6 +78,8 @@ for (const i of getAnswers) {
             if (response.status === 200 && responseJson.url) {
                 myLinkGifs.push(responseJson);
                 localStorage.setItem('gifs', JSON.stringify(myLinkGifs));
+
+                document.title = `${i.textContent}!`;
 
                 getMain.innerHTML = `
                     <div id="show-gif">
@@ -74,58 +106,15 @@ for (const i of getAnswers) {
 
             const secondMyGifs = document.getElementById('in-system-show-gifs');
 
-            secondMyGifs.addEventListener('click', ()=>{
-            getMain.innerHTML = `
-            <section id="my-gifs-section">
-                <img src="./assets/img/miku/miku-person-4.png">
-                <div id="div-d-my-gifs">
-                    <h2>Meus Gifs</h2>
-                    <div id="div-gifs"></div>
-                </div>
-            </section>
-            `;
+            secondMyGifs.addEventListener('click', showMyGifs);
 
-            const divPai = document.getElementById('div-gifs');
-
-            if (myLinkGifs.length) {
-                for (const gifObj of myLinkGifs) {
-                    const gif = document.createElement('img');
-                    gif.setAttribute('src', gifObj.url);
-                    divPai.appendChild(gif);
-                }
-            } else {
-                divPai.innerHTML = `<p id="div-gif-vazio">Não há gifs armazenados.</p>`;
-            }
-            })
         } catch (err) {
             console.log(`Erro: ${err}`);
         }
     });
 }
 
-myGifs.addEventListener('click', () => {
-    getMain.innerHTML = `
-        <section id="my-gifs-section">
-            <img src="./assets/img/miku/miku-person-4.png">
-            <div id="div-d-my-gifs">
-                <h2>Meus Gifs</h2>
-                <div id="div-gifs"></div>
-            </div>
-        </section>
-    `;
-
-    const divPai = document.getElementById('div-gifs');
-
-    if (myLinkGifs.length) {
-        for (const gifObj of myLinkGifs) {
-            const gif = document.createElement('img');
-            gif.setAttribute('src', gifObj.url);
-            divPai.appendChild(gif);
-        }
-    } else {
-        divPai.innerHTML = `<p id="div-gif-vazio">Não há gifs armazenados.</p>`;
-    }
-});
+myGifs.addEventListener('click', showMyGifs);
 
 
 
