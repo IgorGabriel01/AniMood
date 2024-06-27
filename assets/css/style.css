@@ -47,7 +47,8 @@ header {
     transition: 0.5s;
 }
 
-header a, header a img {
+header a,
+header a img {
     width: 15rem;
     align-self: center;
     transition: 0.5s;
@@ -125,7 +126,8 @@ main section img {
 
 /*Estilos de Hover - Home*/
 
-.answers:hover, .div-header-options:hover {
+.answers:hover,
+.div-header-options:hover {
     cursor: pointer;
     opacity: 0.5;
     transition: 0.5s;
@@ -148,13 +150,13 @@ main section img {
     gap: 5rem;
 }
 
-#show-gif > img {
+#show-gif>img {
     width: 14rem;
     height: 13rem;
     margin-top: 2rem;
 }
 
-#show-gif > div div{
+#show-gif>div div {
     margin-top: 1rem;
     display: flex;
     align-items: center;
@@ -169,7 +171,7 @@ main section img {
     transition: 0.5s;
 }
 
-#show-gif > div div:hover {
+#show-gif>div div:hover {
     cursor: pointer;
     opacity: 0.5;
     transition: 0.5s;
@@ -186,7 +188,7 @@ main section img {
     justify-content: space-between;
 }
 
-#error-body > h1 {
+#error-body>h1 {
     font-size: 4rem;
     background: linear-gradient(45deg, #659ACE, #F89BCA);
     -webkit-background-clip: text;
@@ -194,11 +196,11 @@ main section img {
     margin-top: 15rem;
 }
 
-#error-body > p {
+#error-body>p {
     font-size: 1.5rem;
 }
 
-#error-body > img{
+#error-body>img {
     width: 12rem;
     align-self: flex-end;
 }
@@ -211,7 +213,7 @@ main section img {
     justify-content: space-between;
 }
 
-#my-gifs-section > img {
+#my-gifs-section>img {
     width: 14rem;
     margin-top: 2rem;
 }
@@ -224,15 +226,20 @@ main section img {
     gap: 1rem;
 }
 
-#div-d-my-gifs > div {
+#div-d-my-gifs>div {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-#div-d-my-gifs > div img{
+#div-d-my-gifs>div img {
     width: 95%;
     margin-bottom: 1rem;
+}
+
+#div-gifs {
+    overflow: auto;
+    scrollbar-width: thin;
 }
 
 #div-gif-vazio {
@@ -247,7 +254,7 @@ main section img {
         height: 25%;
     }
 
-    main > p {
+    main>p {
         font-size: 1.5rem;
     }
 
@@ -257,7 +264,7 @@ main section img {
         gap: 1rem;
     }
 
-    #principal-section > img {
+    #principal-section>img {
         width: 9rem;
         height: 8rem;
     }
@@ -285,10 +292,10 @@ main section img {
         height: 20%;
     }
 
-    header > img {
+    header>img {
         width: 12rem;
     }
-    
+
     .icons-header {
         width: 1.4rem;
         height: 1.4rem;
@@ -298,7 +305,7 @@ main section img {
         font-size: 0.8rem;
     }
 
-    main > p {
+    main>p {
         font-size: 1.2rem;
     }
 
@@ -324,7 +331,7 @@ main section img {
 }
 
 @media screen and (max-width: 460px) {
-    .div-header-options > p{
+    .div-header-options>p {
         display: none;
     }
 }
@@ -332,12 +339,12 @@ main section img {
 /* Responsividade / Media Queries - Página de erro */
 
 @media screen and (max-width: 680px) {
-    #error-body > h1 {
+    #error-body>h1 {
         font-size: 8vw;
         margin-top: 15rem;
     }
 
-    #error-body > img{
+    #error-body>img {
         width: 8rem;
         align-self: flex-end;
     }

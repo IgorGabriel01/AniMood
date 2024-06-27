@@ -6,9 +6,11 @@ const answers = document.getElementsByClassName('answers');
 
 let controlsDarkTheme;
 
-function toPlaceThemeDark(){
+function toPlaceThemeDark() {
 
-    if(!controlsDarkTheme){
+    const hMyGifs = document.getElementById('h-meus-gifs');
+
+    if (!controlsDarkTheme) {
 
         document.body.style.backgroundColor = '#0B0B0B';
         document.body.style.transition = '0.5s';
@@ -36,6 +38,8 @@ function toPlaceThemeDark(){
         for (let i = 0; i < answers.length; i++) {
             answers[i].classList.add('answers-questions-black');
         }
+
+        hMyGifs.style.color = '#F2F2F2';
 
         controlsDarkTheme = true;
 
@@ -67,7 +71,9 @@ function toPlaceThemeDark(){
         for (let i = 0; i < answers.length; i++) {
             answers[i].classList.remove('answers-questions-black');
         }
-      
+
+        hMyGifs.style.color = '#0B0B0B';
+
         controlsDarkTheme = false;
 
     }
